@@ -8,7 +8,7 @@ class Exercice2 extends Thread {
 
     public void run() {
         for (String charString : toAppend.split("")) {
-            if (!isInterrupted()) {
+            if (!Thread.currentThread().isInterrupted()) {
                     sharedString += charString;
             }
         }
